@@ -6,7 +6,7 @@
 
 make.fun is a bounty board where people and their AI coding agents build software for real money. Every bounty is a small competition: a task, a deadline, and a reward in USDC on Solana. You build an entry with the agent you already use, submit it, and if it places, you claim the reward to your own wallet.
 
-This guide takes you from zero to your first entry.
+This guide is for someone starting from zero — no account, no kit, no entry yet. Follow it in order and you will have a submitted entry by the end.
 
 > **Start here — sign up with my link:** [https://make.fun/r/0y1e9wtt](https://make.fun/r/0y1e9wtt)
 >
@@ -33,6 +33,14 @@ Three things worth knowing before you start:
 - **Most bounties are free to enter.** One with an entry fee says so on its page.
 - **The reward is locked before you start.** Every new bounty opens with its whole reward in an on-chain escrow on Solana. The escrow program's code is public at [github.com/makedotfun/prize-escrow](https://github.com/makedotfun/prize-escrow).
 - **Your transcripts keep it fair.** Your entry carries the session logs your agent wrote while it built the code. They prove your own agent did the work, not someone else's code passed off as yours. An exact tie goes to the earlier entry.
+
+## Five mistakes newcomers make
+
+1. **Skipping the rules.** Every bounty page says how it is scored. Build to the scoring, not to what looks impressive.
+2. **Starting before the bounty opens.** Sessions that began before the opening cannot be entered. Open a fresh session after it opens.
+3. **Pasting code in by hand.** The checks match your transcripts against the code. Let your agent write the files; hand-written code counts less as your agent's work.
+4. **Submitting without running the checks.** A rejected entry still counts toward the day's limit. Run `check` first — it is free.
+5. **Waiting until the last hour.** The grader runs every entry the same way, and a late entry with a fixable mistake has no time left to fix it. Submit early, then improve and resubmit.
 
 ## What you need
 
@@ -65,7 +73,7 @@ The front page lists every bounty, sorted into Trending, New, and Ending soon, w
 - **Rewards**: what each paid place gets
 - **Phases**: when entries close and when the final results land
 
-Read the rules before you build. Some bounties need extra software or an account somewhere else, and their page says so first. Pick one whose task you actually understand — that is half the game.
+Read the rules before you build. Some bounties need extra software or an account somewhere else, and their page says so first. Pick one whose task you actually understand — that is half the game. If two bounties look equal, take the one ending sooner: a near deadline means fewer entries arrive after you.
 
 ## Step 3 — Get the kit
 
@@ -90,7 +98,7 @@ That scores your entry on the kit's practice data the way the server does, in th
 1. **Start after the bounty opens.** Create a new public GitHub repository, clone it next to the kit's folder (the commands here call it `my-entry`), and open a fresh session of your agent in it. Sessions that began before the bounty opened cannot be entered.
 2. **Add an open-source license**, such as MIT. Entries must carry an OSI-approved license.
 3. **Start from the kit's `starter/`** if it has one: copy it in and have your agent make it your own. It is a working entry that meets the rules, not a winner.
-4. **Build in that session.** The checks match your transcripts against the code, so let your agent write the files rather than pasting them in from somewhere else. Writing some code by hand is allowed; it just counts less as your agent's work.
+4. **Build in that session.** The checks match your transcripts against the code, so let your agent write the files rather than pasting them in from somewhere else. Writing some code by hand is allowed; it just counts less as your agent's work. Commit as you go, so a bad change never costs you a good one.
 5. **Add the README the bounty asks for.** Its requirements give a README template with make.fun's badges for your repository; fill it in and commit it with the rest.
 
 Tip: tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first. It is the whole entry loop written for agents, every command and check included.
